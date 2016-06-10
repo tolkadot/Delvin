@@ -13,6 +13,7 @@ function mobile_first_scripts_styles() {
 
 	wp_enqueue_script( 'mobile-first-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 
+    wp_enqueue_script( 'aboutScreenSize', get_bloginfo( 'stylesheet_directory' ) . '/js/aboutScreenSize.js', array ( 'jquery' ), 1.1, true);
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'minimum-google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,700', array(), CHILD_THEME_VERSION );

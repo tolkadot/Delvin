@@ -25,27 +25,10 @@ function dodder_body_class( $classes ) {
  */
 
 function frontPageHeading() {
-?>
- 
-    <div class="frontPageHeading">
-       <h1>tolkadot </h1>
-       <h3>{ webdesign & development }</h3>
-       
-    </div>
-    <div class="buttonArea"> <div class="colFull">
- <div class="buttonDivFrontPage">
- 	<a href='https://janine-live-tolkadot.c9users.io/make-an-appointment/'class=" button actionButton"> Make an Appointment</a>
- 
- </div></div>
-<div class="colFull">	
-  <div class="buttonDivFrontPage">
 
- 	 <a href='https://janine-live-tolkadot.c9users.io/book-a-training-session/' class=" button actionButton">Book a Training Session</a>
- </div>
-		</div>	
-	</div>
-</div>
-<?php
+
+
+
 }
 add_action( 'genesis_after_header', 'frontPageHeading' );
 

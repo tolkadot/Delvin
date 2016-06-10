@@ -5,11 +5,13 @@
 @import "compass"
 @import "breakpoint"
 @import url(https://fonts.googleapis.com/css?family=Poiret+One)
-$phone: 0px 500px
+$smallPhone: 0px 425px
+$phone: 426px 500px
 $tablet: 501px 700px
 $smallScreen: 701px 1000px
 $largeScreen: 1000px 2000px
 $main-font: 'Poiret One'
+$bright: #e5554e
 
 *   
   margin: 0
@@ -26,7 +28,9 @@ nav
   border-bottom: 1px solid black
   padding-top: 1%
   padding-bottom: 1%
-  font-size: 100%		
+  font-size: 100%
+  @include breakpoint($smallPhone)
+    font-size: 80%
   li
     display: inline
     list-style-type: none
@@ -44,17 +48,51 @@ nav
   font-family: $main-font
   text-align: center
   h1
-    font-size: 3000%
+    margin: 0px
+    font-size: 2500%
     @include breakpoint($smallScreen)
       font-size: 2000%
     @include breakpoint($tablet)
       font-size: 1500%
     @include breakpoint($phone)
       font-size: 1000%
+    @include breakpoint($smallPhone)
+      font-size: 800%
   h2
     font-size: 300%
+    padding-bottom: 7%
   h3
     font-size: 200%
     
 
-  
+#about
+  height: 300px
+  width: 100%
+  background: #10eac9
+  font-family: $main-font
+  h1
+    font-size: 100%
+    
+    
+.col
+  float: left 
+ 
+.bgred
+  background: red
+  &:hover
+    background: lighten($bright, 59%)
+
+.bggreen
+  background: green
+
+.bgpink
+  background: pink
+
+.bgblue
+  background: blue
+
+.bggold
+  background: gold
+
+.bgblack
+  background: black
