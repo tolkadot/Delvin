@@ -5,13 +5,14 @@
 @import "compass"
 @import "breakpoint"
 @import url(https://fonts.googleapis.com/css?family=Poiret+One)
-$smallPhone: 0px 425px
-$phone: 426px 500px
-$tablet: 501px 700px
-$smallScreen: 701px 1000px
-$largeScreen: 1000px 2000px
-$main-font: 'Poiret One'
-$bright: #e5554e
+@import url(https://fonts.googleapis.com/css?family=Roboto:300)
+@import "compass/css3/flexbox"
+@import "compass/css3"
+
+
+=hoverer
+  &:hover
+    background: $blockBase
 
 *   
   margin: 0
@@ -64,35 +65,83 @@ nav
   h3
     font-size: 200%
     
-
+#blurb
+  height: $blurbHeight
+  width: $containerWidth
+  background: #fff
+  font-family: $main-font
+  h1
+    font-size: 100%
+  
+.blurbText
+  width:  ($containerWidth/2 - 6%)
+  padding: 5% 3% 
+  font-size: 120%
+  word-spacing: 3px
+  font-family: $copy-font
+  font-weight: 400
+      
+#connect
+  @include display_flex
+  align-items: center
+  justify-content: center
+  height: 100px
+  width: 100%
+  background: $connectBackground
+  font-family: $main-font
+  transition: all .2s ease-in-out
+  //margin: (100px - 24px)/2 0px
+  a
+    color: white
+    text-transform: uppercase
+    text-decoration: none
+    &:hover
+      color: black
+  
 #about
-  height: 300px
+  height: 600px
   width: 100%
   background: #10eac9
   font-family: $main-font
   h1
     font-size: 100%
-    
-    
+ 
+ 
+.centerDiv 
+  margin: 0 auto
+  text-align: center
+  width: 50%
+  border: 2px solid white
+  //margin: (100px - 24px)/2 0px
+
+
 .col
+  float: left 
+  
+.floatLeft
   float: left 
  
 .bgred
-  background: red
+  background: darken($blockBase, 30%)
   &:hover
-    background: lighten($bright, 59%)
+    background: $blockBase
 
 .bggreen
-  background: green
-
+  background: darken($blockBase, 10%)
+  +hoverer
+  
 .bgpink
-  background: pink
+  background: darken($blockBase, 20%)
 
 .bgblue
-  background: blue
+  background: lighten($blockBase, 10%)
 
 .bggold
-  background: gold
+  background: lighten($blockBase, 20%)
 
 .bgblack
-  background: black
+  background: lighten($blockBase, 30%)
+
+  
+
+

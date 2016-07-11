@@ -14,6 +14,7 @@ Tags: responsive-layout, post-formats
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /*! Normalize Sass v1.0.0 | MIT License | github.com/cyrildewit/normalize-sass */
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -317,8 +318,47 @@ nav li a {
   font-size: 200%;
 }
 
+#blurb {
+  height: 310px;
+  width: 100%;
+  background: #fff;
+  font-family: "Poiret One";
+}
+#blurb h1 {
+  font-size: 100%;
+}
+
+.blurbText {
+  width: 44%;
+  padding: 5% 3%;
+  font-size: 120%;
+  word-spacing: 3px;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+#connect {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  background: #24b1e1;
+  font-family: "Poiret One";
+  transition: all 0.2s ease-in-out;
+}
+#connect a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#connect a:hover {
+  color: black;
+}
+
 #about {
-  height: 300px;
+  height: 600px;
   width: 100%;
   background: #10eac9;
   font-family: "Poiret One";
@@ -327,33 +367,47 @@ nav li a {
   font-size: 100%;
 }
 
+.centerDiv {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  border: 2px solid white;
+}
+
 .col {
   float: left;
 }
 
+.floatLeft {
+  float: left;
+}
+
 .bgred {
-  background: red;
+  background: #010405;
 }
 .bgred:hover {
-  background: white;
+  background: #136D8C;
 }
 
 .bggreen {
-  background: green;
+  background: #0d4a5f;
+}
+.bggreen:hover {
+  background: #136D8C;
 }
 
 .bgpink {
-  background: pink;
+  background: #072732;
 }
 
 .bgblue {
-  background: blue;
+  background: #1990b9;
 }
 
 .bggold {
-  background: gold;
+  background: #24b1e1;
 }
 
 .bgblack {
-  background: black;
+  background: #51c1e7;
 }
